@@ -1,0 +1,8 @@
+SELECT
+COUNTRY                   AS País,
+COUNT(COUNTRY)            AS Distintos
+FROM SUPPLIERS 
+GROUP BY COUNTRY
+HAVING Distintos = 1 
+ORDER BY COUNTRY,Distintos 
+LIMIT 0,5
